@@ -1,4 +1,4 @@
-package com.tikal.hangout.guava.collections.pojo;
+package com.tikal.hangout.guava.pojo;
 
 public class EclipsePojo {
 	private String firstName;
