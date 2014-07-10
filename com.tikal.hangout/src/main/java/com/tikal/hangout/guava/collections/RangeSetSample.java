@@ -1,7 +1,6 @@
 package com.tikal.hangout.guava.collections;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import com.google.common.collect.Range;
 import com.google.common.collect.RangeSet;
@@ -22,6 +21,7 @@ public class RangeSetSample {
 		System.out.println("Is two days ago in range? "+timeRange.contains(LocalDateTime.now().minusDays(2)));
 		System.out.println("Is two days ahead in range? "+timeRange.contains(LocalDateTime.now().plusDays(2)));
 		System.out.println("Is two weeks ahead in range? "+timeRange.contains(LocalDateTime.now().plusWeeks(2)));
+		System.out.println("Range is"+timeRange);
 
 	}
 }
