@@ -1,4 +1,4 @@
-package com.tikal.hangout.guava.immutable;
+package com.tikal.hangout.guava.collections.immutable;
 
 import static com.google.common.collect.ImmutableList.of;
 import static java.util.stream.Collectors.joining;

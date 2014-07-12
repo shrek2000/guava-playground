@@ -1,4 +1,4 @@
-package com.tikal.hangout.guava.immutable;
+package com.tikal.hangout.guava.collections.immutable;
 
 import com.google.common.collect.ImmutableMap;
 
