@@ -16,11 +16,13 @@ public class RangeSetSample {
 		LocalDateTime nextWeek = LocalDateTime.now().plusWeeks(1);
 		RangeSet<LocalDateTime> timeRange = TreeRangeSet.create();
 		timeRange.add(Range.closed(lastWeek, yesterday));
-		timeRange.add(Range.closed(tomorrow, nextWeek));
+		timeRange.add(Range.closedOpen(tomorrow, nextWeek));
 		System.out.println("Is today in range? "+timeRange.contains(now));
-		System.out.println("Is two days ago in range? "+timeRange.contains(LocalDateTime.now().minusDays(2)));
-		System.out.println("Is two days ahead in range? "+timeRange.contains(LocalDateTime.now().plusDays(2)));
-		System.out.println("Is two weeks ahead in range? "+timeRange.contains(LocalDateTime.now().plusWeeks(2)));
+		System.out.println("Is two days ago in range? "+timeRange.contains(now.minusDays(2)));
+		System.out.println("Is two days ahead in range? "+timeRange.contains(now.plusDays(2)));
+		System.out.println("Is two weeks ahead in range? "+timeRange.contains(now.plusWeeks(2)));
+		System.out.println("Is nextweek in range? "+timeRange.contains(nextWeek));
+
 		System.out.println("Range is"+timeRange);
 
 	}
