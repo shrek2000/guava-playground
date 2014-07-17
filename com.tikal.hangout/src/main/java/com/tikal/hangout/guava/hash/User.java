@@ -4,13 +4,16 @@ import static java.util.Objects.hash;
 
 import java.util.Objects;
 
-import com.tikal.hangout.guava.hash.HashSample.User;
 
 public class User {
 	private String firstName;
 	private String lastName;
 	private Integer age;
 
+	public static final User createUser(String firstName, String lastName, Integer age){
+		return new User( firstName,  lastName,  age);
+	}
+	
 	public User(String firstName, String lastName, Integer age) {
 		super();
 		this.firstName = firstName;
@@ -65,5 +68,14 @@ public class User {
 				&& Objects.equals(this.lastName, other.lastName)
 				&& Objects.equals(this.age, other.age);
 	}
+
+	@Override
+	public String toString() {
+		return com.google.common.base.Objects.toStringHelper(this)
+				.add("firstName", firstName).add("lastName", lastName).add("age", age)
+				.toString();
+	}
+	
+	
 
 }
