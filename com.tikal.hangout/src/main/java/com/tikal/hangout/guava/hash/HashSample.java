@@ -22,8 +22,10 @@ public class HashSample {
 					.stream()
 					.map(user -> user.toString() + ". hash is :" + hf.newHasher()
 							.putString(user.getLastName(), Charsets.UTF_16)
+							.putString(user.getFirstName(), Charsets.UTF_16)
+							.putInt(user.getAge())
 							.hash().toString())
-							.collect(joining(" , "));
+					.collect(joining(" , "));
 			System.out.println(" Hash Results " + result);
 		}
 
